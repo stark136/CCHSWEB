@@ -16,7 +16,7 @@ class form(models.Model):
     email=models.EmailField(max_length=254)
     number=models.CharField(max_length=14, )
     address= models.CharField(max_length=300)
-    description = models.TextField()
+    description = models.TextField(default ="")
     date= models.DateTimeField(default=timezone.now)
     def __str__(self):
         return self.name 
